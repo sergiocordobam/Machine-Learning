@@ -4,6 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+tensorflow = "==2.8.2"
+django = "*"
+pillow = "*"
 
 [dev-packages]
 
