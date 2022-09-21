@@ -4,6 +4,18 @@
     in.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoq
     yl2QvZ6jIW3" crossorigin="anonymous">
+    <title>PetClassifierApp</title>
 </head>
 
-<h1> Welcome to the PetClassifier App </h1>
+<body>
+        {% load static %}
+    <h1>Welcome to the Pet Classifier App</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="sentFile" /><br /><br />
+        <input type="submit" name="submit" value="Upload" /><br />
+        <img src="{% static 'test.jpg'%}" />
+
+        <h2>{{caption}}</h2>
+    </form>
+</body>
