@@ -9,7 +9,7 @@ import numpy as np
 # Create your views here.
 
 def home(request):
-    petClassifierFiles = mlModels.objects.filter(priority=1)[0]
+    petClassifierFiles = mlModels.objects.filter(priority=3)[0]
     path_arch = petClassifierFiles.architecture.path
     path_weights = petClassifierFiles.weights.path
 
